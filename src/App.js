@@ -42,8 +42,7 @@ function App() {
                 sunset: ConvertTime(data.sys.sunset),
                 error: undefined
             })
-        }
-        else{
+        } else {
             setState({
                 temp: undefined,
                 city: undefined,
@@ -56,16 +55,25 @@ function App() {
     }
 
     return (
-        <div>
-            <Header></Header>
-            <Form weatherMethod={gettingWeather}></Form>
-            <Weather temp={state.temp}
-                     city={state.city}
-                     county={state.country}
-                     sunrise={state.sunrise}
-                     sunset={state.sunset}
-                     error={state.error}
-            ></Weather>
+        <div className='wrapper'>
+            <div className="main">
+                <div className="container">
+                    <div className="row">
+                        <div className='col-sm-5 header' ><Header></Header></div>
+                        <div className='col-sm-7 form' ><Form weatherMethod={gettingWeather}></Form>
+
+
+                            <Weather temp={state.temp}
+                                     city={state.city}
+                                     county={state.country}
+                                     sunrise={state.sunrise}
+                                     sunset={state.sunset}
+                                     error={state.error}
+                            ></Weather>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     );

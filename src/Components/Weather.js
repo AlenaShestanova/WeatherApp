@@ -4,7 +4,7 @@ export default function Weather(props) {
 
     return (
 
-        <div>
+        <div className='infoWeath'>
             {props.city&&
             <div>
                 <p>Местоположение:{props.city},{props.county}</p>
@@ -15,7 +15,7 @@ export default function Weather(props) {
 
             </div>
             }
-            <p>{props.error}</p>
+            <p className='error'>{props.error}</p>
         </div>
     )
 }
