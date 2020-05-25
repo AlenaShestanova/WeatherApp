@@ -15,6 +15,7 @@ export default function Weather(props) {
 
             </div>
             }
+            <p>{props.error}</p>
         </div>
     )
 }
