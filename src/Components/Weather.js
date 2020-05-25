@@ -5,7 +5,7 @@ export default function Weather(props) {
     return (
 
         <div className='infoWeath'>
-            {props.city&&
+            {props.city &&
             <div>
                 <p>Местоположение:{props.city},{props.county}</p>
                 <p>Температура:{props.temp}</p>
